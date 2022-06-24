@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.zkte" name="zkte Matrix Repository" provider-name="zkte" version="1.0.1">
+  <extension point="xbmc.addon.repository" name="zkte Matrix Repository">
+    <dir minversion="19.0.0">
+      <info compressed="false">https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/addons.xml.md</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/</datadir>
+      <hashes>false</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en_GB">zkte</description>
+    <assets>
+      <icon>icon.png</icon>
+    </assets> 
+  </extension>
+</addon>

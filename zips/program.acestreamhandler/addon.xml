@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="program.acestreamhandler" name="Ace Stream Handler" version="0.1.4" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="program.acestreamhandler.monitor" version="0.1.2"/>
+    <import addon="script.module.requests" version="2.25.1+matrix.1"/>
+    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
+    <import addon="script.module.bencodepy" version="4.0.0+matrix.1"/>
+    <import addon="script.module.beautifulsoup4" version="4.9.3+matrix.1"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Ace Stream Handler</summary>
+    <description lang="en_GB">Ace Stream Handler</description>
+    <disclaimer lang="en_GB"></disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <assets>
+        <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>

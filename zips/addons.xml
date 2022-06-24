@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="repository.zkte" name="zkte Matrix Repository" provider-name="zkte" version="1.0.1">
+  <extension point="xbmc.addon.repository" name="zkte Matrix Repository">
+    <dir minversion="19.0.0">
+      <info compressed="false">https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/addons.xml.md</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/zkte/repository.zkte/matrix/zips/</datadir>
+      <hashes>false</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en_GB">zkte</description>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.bencodepy" name="bencode.py" version="4.0.0+matrix.1" provider-name="fuzeman">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Simple bencode parser</summary>
+    <description lang="en_GB">Simple bencode parser</description>
+    <license>BitTorrent Open Source License</license>
+    <platform>all</platform>
+    <website>https://github.com/fuzeman/bencode.py</website>
+    <source>https://github.com/fuzeman/bencode.py</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="program.acestreamhandler.monitor" name="Ace Stream Monitor" version="0.1.2" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.25.1+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="script.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <summary lang="en_GB">Ace Stream Monitor</summary>
+    <description lang="en_GB">Ace Stream Monitor</description>
+    <disclaimer lang="en_GB"></disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <assets>
+        <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="program.acestreamhandler" name="Ace Stream Handler" version="0.1.4" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="program.acestreamhandler.monitor" version="0.1.2"/>
+    <import addon="script.module.requests" version="2.25.1+matrix.1"/>
+    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
+    <import addon="script.module.bencodepy" version="4.0.0+matrix.1"/>
+    <import addon="script.module.beautifulsoup4" version="4.9.3+matrix.1"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Ace Stream Handler</summary>
+    <description lang="en_GB">Ace Stream Handler</description>
+    <disclaimer lang="en_GB"></disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <assets>
+        <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.8" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
+    <import addon="script.module.requests" version="2.27.1+matrix.1"/>
+    <import addon="script.module.dateutil" version="2.8.1+matrix.1"/>
+    <import addon="script.module.zkte.m3u8" version="2.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="resources/service/toolazy_proxy.py" start="[login|startup]" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">Too Lazy</summary>
+    <description lang="en_gb">Too Lazy</description>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.zkte.iso8601" name="iso8601" version="1.0.2" provider-name="Michael Twomey">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Simple module to parse ISO 8601 dates</summary>
+    <description lang="en_GB">This module parses the most common forms of ISO 8601 date strings (e.g. 2007-01-14T20:34:22+00:00) into datetime objects.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/micktwomey/pyiso8601</website>
+    <source>https://github.com/micktwomey/pyiso8601</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.zkte.m3u8" name="m3u8" version="2.0.0" provider-name="Globo.com">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.zkte.iso8601" version="1.0.2"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python m3u8 parser</summary>
+    <description lang="en_GB">Python m3u8 parser</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/globocom/m3u8</website>
+    <source>https://github.com/globocom/m3u8</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+</addons>

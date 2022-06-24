@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.bencodepy" name="bencode.py" version="4.0.0+matrix.1" provider-name="fuzeman">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Simple bencode parser</summary>
+    <description lang="en_GB">Simple bencode parser</description>
+    <license>BitTorrent Open Source License</license>
+    <platform>all</platform>
+    <website>https://github.com/fuzeman/bencode.py</website>
+    <source>https://github.com/fuzeman/bencode.py</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
