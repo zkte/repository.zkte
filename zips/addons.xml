@@ -85,30 +85,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.8" provider-name="zkte">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
-    <import addon="script.module.requests" version="2.27.1+matrix.1"/>
-    <import addon="script.module.dateutil" version="2.8.1+matrix.1"/>
-    <import addon="script.module.zkte.m3u8" version="2.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="resources/service/toolazy_proxy.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_gb">Too Lazy</summary>
-    <description lang="en_gb">Too Lazy</description>
-    <platform>all</platform>
-    <license>GPL-3.0-only</license>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="script.module.zkte.iso8601" name="iso8601" version="1.0.2" provider-name="Michael Twomey">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -140,6 +116,30 @@
     <platform>all</platform>
     <website>https://github.com/globocom/m3u8</website>
     <source>https://github.com/globocom/m3u8</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.9" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
+    <import addon="script.module.requests" version="2.27.1+matrix.1"/>
+    <import addon="script.module.dateutil" version="2.8.1+matrix.1"/>
+    <import addon="script.module.zkte.m3u8" version="2.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="resources/service/toolazy_proxy.py" start="[login|startup]" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">Too Lazy</summary>
+    <description lang="en_gb">Too Lazy</description>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
